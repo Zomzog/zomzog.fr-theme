@@ -1,0 +1,18 @@
+name = "Zomzog theme"
+license = "GPL-3.0"
+licenselink = "https://github.com/zomzog/zomzog.fr-theme/blob/master/LICENSE"
+description = "A simple Hugo theme based on the Bootstrap v4 blog example."
+homepage = "https://github.com/zomzog/zomzog.fr-theme"
+tags = ["bootstrap", "blog", "font awesome"]
+features = ["responsive", "blog"]
+min_version = 0.25
+
+[author]
+  name = "Zomzog"
+  homepage = "https://zomzog.fr"
+
+[original]
+  author = "Alan Orth"
+  homepage = "https://englishbulgaria.net"
+
+# vim: ts=2 sw=2 et
