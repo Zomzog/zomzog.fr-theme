@@ -44,15 +44,15 @@
       <div class="container">
         <nav class="nav blog-nav">
           <a class="nav-link {{ if .IsHome }}active{{ end }}" href="{{ .Site.BaseURL | absLangURL }}">{{ .Site.Title | safeHTML }}</a>
-          {{- $currentURL := .URL | absLangURL -}}
+          {{- $currentURL := .Permalink -}}
           {{ if .Site.Params.custom_navbar }}
           {{ range .Site.Menus.navbar }}
-          {{ $menuURL := .URL | absLangURL }}
+          {{ $menuURL := .Permalink }}
           <a class="nav-link{{ if eq $menuURL $currentURL }} active{{ end }}" href="{{.URL | absURL }}">{{ .Name }}</a>
           {{ end }}
           {{ else }}
           {{ range where .Site.RegularPages "Type" "!=" "post" }}
-          {{ $permalinkURL := .Permalink | absLangURL }}
+          {{ $permalinkURL := .Permalink }}
           <a class="nav-link{{ if eq $permalinkURL $currentURL }} active{{ end }}" href="{{ .Permalink }}">{{ .Title }}</a>
           {{ end }}
           {{ end }}
