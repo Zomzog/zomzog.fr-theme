@@ -1,11 +1,11 @@
 <div class="accordion">
   <h5>
-    <a class="collapsed" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    <a class="collapsed" data-toggle="collapse" href="#{{ .Get "id" }}" role="button" aria-expanded="false" aria-controls="{{ .Get "id" }}">
         <i class="fa fa-caret-down" aria-hidden="true"></i>
         {{ .Get "title" }}
     </a>
   </h5>
-  <div class="collapse" id="collapseExample">
+  <div class="collapse" id="{{ .Get "id" }}">
     {{ .Inner }}
   </div>
 </div>
